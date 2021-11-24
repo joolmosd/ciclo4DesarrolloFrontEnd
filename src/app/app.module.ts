@@ -3,10 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { IndexComponent } from './components/index/index.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LoginComponent } from './modules/security--routing/login/login.component';
+import { LogOutComponent } from './modules/security--routing/log-out/log-out.component';
+import { CreateComponent } from './modules/admin--routing/create/create.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    IndexComponent,
+    NotFoundComponent,
+    LoginComponent,
+    LogOutComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
