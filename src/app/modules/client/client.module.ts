@@ -1,8 +1,9 @@
+import { ClientRoutingModule } from './client--routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateComponent } from './create/create.component';
-import { EditComponent } from './edit/edit.component';
-import { GetComponent } from './get/get.component';
+import { CreateComponent } from './../client/create/create.component';
+import { EditComponent } from './../client/edit/edit.component';
+import { GetComponent } from './../client/get/get.component';
 
 
 
@@ -13,7 +14,8 @@ import { GetComponent } from './get/get.component';
     GetComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ClientRoutingModule
   ]
 })
 export class ClientModule { }

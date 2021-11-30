@@ -4,8 +4,6 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { GetComponent } from './get/get.component';
 
-
-
 @NgModule({
   declarations: [
     CreateComponent,
