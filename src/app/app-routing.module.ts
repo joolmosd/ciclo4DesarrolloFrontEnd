@@ -26,6 +26,9 @@ const routes: Routes = [
   {path: 'client',
     loadChildren: () => import('./modules/client/client.module').then(m => m.ClientModule)
   },
+  {path: 'service',
+    loadChildren: () => import('./modules/service/service.module').then(m => m.ServiceModule)
+  },
   {
     path: 'error',
     component: NotFoundComponent,
