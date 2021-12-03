@@ -17,6 +17,16 @@ export class EntrustService {
       this.token = this.securityService.getToken();
     }
 
+    store(entrust: Entrust): Observable<Entrust> {
+      return this.http.post<Entrust>(`${this.url}/entrusts`, {
+  
+        description:entrust.description,
+        size:entrust.size,
+        type:entrust.type,
+        presentation:entrust.presentation
+      });
+    }
+
     update(entrust: Entrust): Observable<Entrust> {
       return this.http.put<Entrust>(`${this.url}/entrusts/${entrust.id}`, {
         description: entrust.description,
