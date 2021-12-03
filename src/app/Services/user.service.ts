@@ -19,16 +19,16 @@ export class UserService {
     }
     
     store(usuario: User): Observable<User> {
-      return this.http.post<User>(`${this.url}/usuarios`, {
-        nombre: usuario.nombre,
-        apellidos: usuario.apellidos,
-        telefono: usuario.telefono,
-        correo: usuario.correo
+      return this.http.post<User>(`${this.url}/users`, {
+        names: usuario.nombre,
+        lastNames: usuario.apellidos,
+        phone: usuario.telefono,
+        email: usuario.correo
       });
     }
 
     getAll(): Observable<User[]>{
-      return this.http.get<User[]>(`${this.url}/usuarios`, {
+      return this.http.get<User[]>(`${this.url}/users`, {
         headers: new HttpHeaders({
           "Authorization": `Bearer ${this.token}`
         })
@@ -37,11 +37,11 @@ export class UserService {
 
 
     update(usuario: User): Observable<User> {
-      return this.http.put<User>(`${this.url}/usuarios/${usuario.id}`, {
-        nombre: usuario.nombre,
-        apellidos: usuario.apellidos,
-        telefono: usuario.telefono,
-        correo: usuario.correo
+      return this.http.put<User>(`${this.url}/users/${usuario.id}`, {
+        names: usuario.nombre,
+        lastNames: usuario.apellidos,
+        phone: usuario.telefono,
+        email: usuario.correo
       }, {
         headers: new HttpHeaders({
           "Authorization": `Bearer ${this.token}`
@@ -51,7 +51,7 @@ export class UserService {
 
 
     delete(id: string): Observable<User[]>{
-      return this.http.delete<User[]>(`${this.url}/usuarios/${id}`, {
+      return this.http.delete<User[]>(`${this.url}/users/${id}`, {
         headers: new HttpHeaders({
           "Authorization": `Bearer ${this.token}`
         })
@@ -59,8 +59,8 @@ export class UserService {
     }
 
 
-    getWithId(id: string): Observable<User>{
-      return this.http.get<User>(`${this.url}/usuarios/${id}`,{
+    getWithId(id: string): Observable<any>{
+      return this.http.get<User>(`${this.url}/users/${id}`,{
         headers: new HttpHeaders({
           "Authorization": `Bearer ${this.token}`
         })

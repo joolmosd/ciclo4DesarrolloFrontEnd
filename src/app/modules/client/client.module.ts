@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CreateComponent } from './../client/create/create.component';
 import { EditComponent } from './../client/edit/edit.component';
 import { GetComponent } from './../client/get/get.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { GetComponent } from './../client/get/get.component';
   ],
   imports: [
     CommonModule,
-    ClientRoutingModule
+    ClientRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ClientModule { }

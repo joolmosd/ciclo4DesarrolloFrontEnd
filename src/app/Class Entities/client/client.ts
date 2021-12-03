@@ -9,5 +9,5 @@ export class Client {
     country:string;
     city:string;
     departament:string;
-    addres:string;
+    address:string;
 }

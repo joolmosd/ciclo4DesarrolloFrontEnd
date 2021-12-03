@@ -1,11 +1,15 @@
 <nav>
-    <div class="nav-wrapper amber lighten-1">
-      <a href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper" style="background-color: rgb(255,153,0)">
+      <a href="#" class="brand-logo"> 
+        <img src="./../../../assets/amazon.png" width="60" style="margin-left: 20px;">
+      </a>
+      <a *ngIf="activeSession" style="font-size:40px; margin-left:150px; color: black;">Bienvenido de vuelta {{userName}}</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a routerLink="/admin/get">Users</a></li>
-        <li><a routerLink="/entrust/get">Entrust</a></li>
-        <li><a routerLink="/client/get">Clients</a></li>
-        <li><a routerLink="/service/get">Services</a></li>
+        <li *ngIf="activeSession"><a routerLink="/admin/get">Users</a></li>
+        <li *ngIf="activeSession"><a routerLink="/entrust/get">Entrust</a></li>
+        <li *ngIf="activeSession"><a routerLink="/client/get">Clients</a></li>
+        <li *ngIf="activeSession"><a routerLink="/service/get">Services</a></li>
+        <li *ngIf="!activeSession"><a routerLink="/security/register">Registrar</a></li>
         <li *ngIf="!activeSession"><a routerLink="/security/login">Log In</a></li>
         <li *ngIf="activeSession"><a routerLink="/security/logout">Log Out</a></li>
       </ul>

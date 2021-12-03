@@ -1,0 +1,108 @@
+body {
+    /* background: linear-gradient(168deg, rgba(57, 205, 255, 1) 0%, rgba(227, 70, 221, 1) 75%) !important; */
+  
+    background-image: url("https://laopinion.com/wp-content/uploads/sites/3/2018/10/shutterstock_1144120070.jpg?quality=80&strip=all&w=1000");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+  }
+
+  .cotainer {
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 89vh;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    h2 {
+      font-size: 10em;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    h2 span {
+      position: relative;
+      display: inline-flex;
+      color: black;
+    }
+
+    /* Selecciono la posición numérica en una serie de hermanos es impar: 1, 3, 5, etc.*/
+    h2 span:nth-child(odd) {
+      /* espacio entre cada letra */
+      color: rgba(255, 153, 0);;
+      line-height: 1em;
+      overflow: hidden;
+      letter-spacing: -1em;
+      transition: 0.5s ease-in-out;
+
+    }
+
+
+    /* Selecciono la posición numérica en una serie y (odd ) se usa para indicar los hermanos impares: 1, 3, 5, etc.
+    se le aplica un hover*/
+    h2:hover span:nth-child(odd) {
+      /* espacio entre cada letra */
+      letter-spacing: 0;
+    }
+
+    /* Selecciono la posición numérica 2 del span*/
+    h2 span:nth-child(2) {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    /* estilos del numero 2 */
+    h2 span:nth-child(2):after {
+      content: "✉️";
+      position: absolute;
+      bottom: 0;
+      top: 34px;
+      right: 30px;
+      font-size: 0.20em;
+    }
+
+    /* aqui va el texto Oxygen en la etiqueta i */
+    h2 i {
+      position: absolute;
+      transform: translateX(-50%);
+      font-size: 18px;
+      color: #000;
+      font-weight: 4000;
+      font-style: initial;
+      line-height: 1em;
+    }
+
+    /* estilos del texto oxygen */
+    h2 i::before {
+      content: "CNT";
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      display: initial;
+      transition: 0.5s;
+    }
+
+
+    /* hover del texto oxygen */
+    h2:hover i::before {
+      opacity: 0;
+      letter-spacing: 2em;
+    }
+
+    /* estilos del texto helping India... */
+    h2 i::after {
+      content: "Conectando Personas";
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+    }
+
+    h2:hover i::after {
+      opacity: 1;
+      visibility: visible;
+    }

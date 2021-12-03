@@ -14,7 +14,7 @@ export class LogOutComponent implements OnInit {
 
   ngOnInit(): void {
     this.securityService.eliminarSesion();
-    this.router.navigate(['/seguridad/login']);
+    this.router.navigate(['/security/login']);
   }
 
 }

@@ -1,1 +1,29 @@
-<p>get works!</p>
+<div class="container">
+    <br>
+    <a routerLink="/entrust/create" class="btn">Registrar Encomienda</a>
+   
+    <table class="table responsive">
+      <thead>
+        <tr>
+            <th>Descripción</th>
+            <th>Peso</th>
+            <th>Tipo</th>
+            <th>Presentación</th>
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>{{p.description}}</td>
+          <td>{{p.size}}</td>
+          <td>{{p.type}}</td>
+          <td>{{p.presentation}}</td>
+          <td>
+            <a routerLink="/entrust/edit/{{p.id}}" class="btn">Editar</a>
+            <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  
