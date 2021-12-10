@@ -4,6 +4,7 @@ import { AdminRoutingModule } from './admin--routing.module';
 import { CreateComponent } from './Users/create/create.component';
 import { EditComponent } from './Users/edit/edit.component';
 import { GetComponent } from './Users/get/get.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,10 @@ import { GetComponent } from './Users/get/get.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ]
 })
 export class AdminModule { }

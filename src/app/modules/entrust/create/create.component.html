@@ -30,7 +30,14 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                  <input formControlName="presentation" id="presentation" type="text" class="validate">        
+                  <!-- <input formControlName="presentation" id="presentation" type="text" class="validate">         -->
+                  <label formControlName="presentation" id="presentation" type="text" class="validate">Seleccione su Presentación</label >
+                  <select class="browser-default">
+                    <option value="" disabled selected></option>
+                    <option value="caja">Caja</option>
+                    <option value="bolsa">Bolsa</option>
+                    <option value="sobre">Sobre</option>
+                  </select>
                   <!-- <select>
                       <option value="" disabled selected>Choose your option</option>
                       <option value="1">Option 1</option>
@@ -39,7 +46,7 @@
                     </select>
                     <label>Materialize Select</label> -->
                       
-                  <label for="presentation">Presentación</label>
+                  <!-- <label for="presentation">Presentación</label> -->
                 </div>
               </div>
   

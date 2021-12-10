@@ -71,7 +71,7 @@ export class ClientService {
 
 
   getWithId(id: string): Observable<Client>{
-    return this.http.get<Client>(`${this.url}/Clients/${id}`,{
+    return this.http.get<Client>(`${this.url}/clients/${id}`,{
       headers: new HttpHeaders({
         "Authorization": `Bearer ${this.token}`
       })

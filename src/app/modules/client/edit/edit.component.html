@@ -1,1 +1,93 @@
-<p>edit works!</p>
+
+<div class="row">
+    <div class="col s12 l4 offset-l4">
+      <div class="card grey lighten-3">
+        <div class="card-content">
+          <h4 class="card-title center-align" style="font-size:40px">Editar Cliente</h4>
+          <form [formGroup]="fgValidacion" (ngSubmit)="edit()" class="col s12" style="margin-top: 50px;">
+            <div class="row">
+              <div class="input-field col s12">
+                <input formControlName="identification" id="identification" type="text" class="validate">
+                <label for="identification">Identificacion</label>
+                <div class="mensajeValidacion">
+                  <strong>Este campo es requerido.</strong>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input formControlName="name" id="name" type="text" class="validate">
+                <label for="name">Nombre</label>
+                <div class="mensajeValidacion">
+                  <strong>Este campo es requerido.</strong>
+                </div>
+              </div>
+              <div class="input-field col s6">
+                <input formControlName="lastNames" id="lastNames" type="text" class="validate">
+                <label for="lastNames">Apellidos</label>
+                <div class="mensajeValidacion">
+                  <strong>Este campo es requerido.</strong>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="input-field col s12">
+                <input formControlName="email" id="email" type="email" class="validate">
+                <label for="email">Email</label>
+                <div class="mensajeValidacion">
+                  <strong>Este campo es requerido.</strong>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input formControlName="phone" id="phone" type="text" class="validate">
+                <label for="phone">Telefono</label>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="input-field col s6">
+                <input formControlName="country" id="country" type="text" class="validate">
+                <label for="country">Pais</label>
+              </div>
+              <div class="input-field col s6">
+                <input formControlName="city" id="city" type="text" class="validate">
+                <label for="city">Ciudad</label>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="input-field col s6">
+                <input formControlName="departament" id="departament" type="text" class="validate">
+                <label for="departament">Departemento</label>
+                <div class="mensajeValidacion">
+                  <strong>Este campo es requerido.</strong>
+                </div>
+              </div>
+              <div class="input-field col s6">
+                <input formControlName="address" id="address" type="text" class="validate">
+                <label for="address">Dirección</label>
+                <div class="mensajeValidacion">
+                  <strong>Este campo es requerido.</strong>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+            <!-- boton de submit -->
+            <div class="row center-align">
+              <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit"
+                name="action">Enviar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

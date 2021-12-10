@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SessionGuard } from 'src/app/guards/session.guard';
 import { CreateComponent } from './../service/create/create.component';
 import { EditComponent } from './../service/edit/edit.component';
 import { GetComponent } from './../service/get/get.component';
@@ -11,12 +12,16 @@ const routes: Routes = [
     component: CreateComponent,
   },
   {
-    path: "edit",
+    path: "edit/:id",
     component: EditComponent,
+    canActivate: [SessionGuard]
+
   },
   {
     path: "get",
     component: GetComponent,
+    canActivate: [SessionGuard]
+
   },
   {
     path: '',
