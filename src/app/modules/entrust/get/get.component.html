@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <br>
     <a routerLink="/entrust/create" class="btn">Registrar Encomienda</a>
    
@@ -26,4 +26,47 @@
       </tbody>
     </table>
     </div>
-  
+   -->
+
+<body>
+  <div class="container">
+    <br>
+    <div class="fixed-action-btn toolbar">
+      <a routerLink="/entrust/create" class="btn-floating btn-large waves-effect grey darken-3"><i
+          class="material-icons">add</i></a>
+    </div>
+    <table class="table responsive">
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>
+            <div class="row mt-2">
+              <div class="col s3 m5">
+                <div class="card light-blue lighten-3">
+                  <div class="card-image">
+                    <img class="responsive-img" src="../../../../assets/delivery2.png" style="height: 40%;
+                    width: 40%;
+                    margin-left:30%;
+                    top: 30px;
+                    bottom: 30px;">
+                    <span class="card-title" style="top: 40px;">{{p.description}}</span>
+                    <a routerLink="/entrust/edit/{{p.id}}"
+                      class="btn-floating halfway-fab waves-effect green accent-3"><i
+                        class="material-icons">edit</i></a>
+                    <button class="btn-floating halfway-fab waves-effect red" (click)="delete(p.id)"><i
+                        class="material-icons">delete_forever</i></button>
+                  </div>
+                  <div class="card-content" style="font-size: 20px;margin-top: 15px;">
+                    <p>Size is: {{p.size}}<br>
+                      Type is: {{p.type}}<br>
+                      Presentation is: {{p.presentation}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>

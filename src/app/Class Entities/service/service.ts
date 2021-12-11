@@ -7,7 +7,7 @@ export class Service {
     date:string;
     time:string;
     value:number;
-    origin:Client;
-    destiny:Client;
-    entrust: Entrust;
+    origin: string;
+    destiny:string;
+    entrust: string;
 }

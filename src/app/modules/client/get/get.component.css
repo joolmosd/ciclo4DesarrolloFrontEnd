@@ -1,0 +1,25 @@
+body{
+    background-image: url("/../../../../assets/amazonClients.jpg");
+    background-size: 100%;
+}
+
+
+.card .card-image .card-title {
+    color: black;
+    position: relative;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+.btn-floating.halfway-fab {
+    position: relative;
+    left: 45px;
+    bottom: -25px;
+}
+
+.card-content {
+    font-size: 20px;
+    margin-top:10px;
+}
+

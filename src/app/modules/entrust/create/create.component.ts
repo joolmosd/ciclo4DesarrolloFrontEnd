@@ -52,7 +52,7 @@ export class CreateComponent implements OnInit {
             title: 'Error!',
             text: 'Error en el Registro',
             icon: 'error',
-            confirmButtonText: 'Cool'
+            confirmButtonText: 'Accept'
           })
         })
   }

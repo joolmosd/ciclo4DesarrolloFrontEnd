@@ -1,4 +1,7 @@
-<div class="container">
+<body>
+
+
+  <!-- <div class="container">
     <br>
     <a routerLink="/admin/create" class="btn">Registrar Persona</a>
    
@@ -27,4 +30,42 @@
       </tbody>
     </table>
     </div>
-  
+   -->
+
+  <div class="container">
+    <br>
+    <div class="fixed-action-btn toolbar">
+      <a routerLink="/admin/create" class="btn-floating btn-large waves-effect grey darken-3"><i
+          class="material-icons">add</i></a>
+    </div>
+    <table class="table responsive">
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>
+            <div class="row mt-2">
+              <div class="col s3 m5">
+                <div class="card orange lighten-3">
+                  <div class="card-image">
+                    <img class="responsive-img" src="../../../../../assets/users.png" style="height: 40%;
+                  width: 40%;
+                  margin-left:30%;">
+                    <span class="card-title" style="margin-top: 20%;">{{p.names + " " + p.lastNames }}</span>
+                    <a routerLink="/admin/edit/{{p.id}}" class="btn-floating halfway-fab waves-effect green accent-3"><i
+                        class="material-icons">edit</i></a>
+                    <button class="btn-floating halfway-fab waves-effect red" (click)="delete(p.id)"><i
+                        class="material-icons">delete_forever</i></button>
+                  </div>
+                  <div class="card-content" style="font-size: 20px;">
+                    <p>Email is: {{p.email}} <br>
+                      Phone is: {{p.phone}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>

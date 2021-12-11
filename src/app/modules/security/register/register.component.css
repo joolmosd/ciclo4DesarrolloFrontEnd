@@ -1,0 +1,28 @@
+body{
+    background-image: url("../../../../assets/AmazonRegistro.jpg");
+    background-size: 50%;
+}
+
+strong{
+    color: white
+}
+
+.card-title{
+   font-size:50px;
+   font-family: 'Open Sans', sans-serif;
+   color: rgb(255,153,0);
+}
+input{
+    color: white;
+}
+label{
+    color: rgb(255,153,0);
+}
+
+button{
+    background-color:rgb(255,153,0);
+}
+
+button:hover{
+    background-color:rgba(206, 123, 0, 0.979);
+}

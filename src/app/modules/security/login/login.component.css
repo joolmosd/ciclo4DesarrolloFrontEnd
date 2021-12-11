@@ -1,0 +1,13 @@
+body{
+    background-image: url("../../../../assets/AmazonLogin.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+button{
+    background-color:rgb(255,153,0);
+}
+
+button:hover{
+    background-color:rgba(206, 123, 0, 0.979);
+}

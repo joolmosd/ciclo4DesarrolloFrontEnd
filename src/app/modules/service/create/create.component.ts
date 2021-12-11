@@ -47,6 +47,7 @@ export class CreateComponent implements OnInit {
     this.service.destiny = this.fgValidacion.controls["destiny"].value;
     this.service.entrust = this.fgValidacion.controls["entrust"].value;
 
+    console.log(this.service)
     
     this.serviceService.store(this.service).subscribe
       ((data) => {
@@ -57,7 +58,7 @@ export class CreateComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500
         }).then(() => {
-          this.router.navigate(['/entrust/get']);
+          this.router.navigate(['/service/get']);
         })
       },
         (error) => {
@@ -65,7 +66,7 @@ export class CreateComponent implements OnInit {
             title: 'Error!',
             text: 'Error en el Registro',
             icon: 'error',
-            confirmButtonText: 'Cool'
+            confirmButtonText: 'Accept'
           })
         })
   }

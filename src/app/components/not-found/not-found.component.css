@@ -1,7 +1,7 @@
 body{
-    background: linear-gradient(90deg, rgba(255,180,0,1) 30%, rgba(0,0,0,0.8298669809720763) 65%);
+    background-image: url("../../../assets/notFound.jpg");
     height:100vh;
-    background-size: 100%;
+    background-size: 20%;
 }
 
 .error-page{
@@ -12,7 +12,7 @@ body{
     display:flex;
     align-items: center;
     justify-content:center;
-    background:#dfdfdf;
+    background:transparent;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
 
 }
@@ -34,13 +34,13 @@ body{
     top: 10px;
     left: 0;
     right: 0;
-    background: -webkit-repeating-linear-gradient(-45deg,#71b7e6,
-    #69a6ce,#b98acc,#ee8176,#b98acc,#69a6ce,#9b599b);
+    background: -webkit-repeating-linear-gradient(-45deg,#ffff,
+    #ff9900,#1976d2,#ffff,#1976d2,#ff9900,#ddca5e);
     background-size: 400%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 2px rgba(255,255,255,0.25);
-    animation: animate 10s ease-in-out infinite;
+    animation: animate 5s ease-in-out infinite;
 }
 
 @keyframes animate{
@@ -65,7 +65,7 @@ body{
     font-size:1.5em;
     margin-bottom: 20px;
     text-transform:uppercase;
-    color: #000;
+    color: white;
     max-width: 600px;
     font-size:2em;
     position: relative;
@@ -84,7 +84,7 @@ body{
 
 .content p{
     font-size:1.2em;
-    color: #0d0d0d;
+    color:white;
 }
 
 .content .btns{
@@ -97,7 +97,7 @@ body{
     margin: 0 10px;
     text-decoration: none;
     border: 2px solid #ff8400;
-    color:#3e3d3d;
+    color:white;
     font-weight: 500;
     padding:10px 25px;
     border-radius: 25px;
