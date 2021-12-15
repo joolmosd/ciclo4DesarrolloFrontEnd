@@ -9,7 +9,7 @@ import { SecurityService } from './security.service';
 })
 export class EntrustService {
 
-  url = "http://localhost:3000"
+  url = "https://backendamazon.herokuapp.com"
   token: string = ''
 
   constructor(private http: HttpClient,

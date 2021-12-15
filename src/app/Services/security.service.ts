@@ -8,7 +8,7 @@ import { User} from '../Class Entities/user/user';
 })
 export class SecurityService {
 
-  url = "http://localhost:3000";
+  url = "https://backendamazon.herokuapp.com";
   sessionUserData = new BehaviorSubject<User>(new User());
 
   constructor(private http: HttpClient) {

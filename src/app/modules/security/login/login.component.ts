@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
           title: 'Error!',
           text: 'Datos invalidos',
           icon: 'error',
-          confirmButtonText: 'Cool'
+          confirmButtonText: 'Accept'
         })
 
       }
